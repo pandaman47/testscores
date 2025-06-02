@@ -20,13 +20,3 @@ logging.basicConfig(
 )
 
 
-"""
-if __name__ == "__main__":
-    try:
-        a = 1/0  # This will raise a ZeroDivisionError
-    except Exception as e:
-        logging.info("Divide by zero error occurred")
-        raise CustomException(e,sys)
-
-"""
-##    logging.info("Logging has been set up successfully.")
