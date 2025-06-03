@@ -7,5 +7,6 @@ scipy
 ipykernel
 catboost
 xgboost
+dill
 
 #-e .
