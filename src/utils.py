@@ -62,6 +62,16 @@ def evaluate_model(X_train, y_train, X_test, y_test, models, params, cv=3, n_job
         logging.info(f"Model evaluation report: {report}")
 
         return report
+    
+    except Exception as e:
+        raise CustomException(e, sys)
+    
 
+def load_object(file_path):
+    try:
+        with open(file_path, 'rb') as file_obj:
+            obj = dill.load(file_obj)
+        logging.info(f"Object loaded from {file_path}")
+        return obj
     except Exception as e:
         raise CustomException(e, sys)
